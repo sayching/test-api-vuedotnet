@@ -14,6 +14,7 @@ using WeightTrackerOkta.Models;
 
 namespace vue_api.Controllers
 {
+    [Authorize]
     public class WeightMeasurementsController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -117,4 +118,4 @@ namespace vue_api.Controllers
             return db.WeightMeasurements.Count(e => e.Id == id) > 0;
         }
     }
-}
+}                       
